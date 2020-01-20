@@ -1,0 +1,493 @@
+/* code inside body is the default which means everything on our site will be like this until and unless soe other code is applied.*/
+body {
+	font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 3; /*Z index implies the overlay of one thing over the other, the component having highes z index will appear above the component of lower z-index, and in our project our buttons have a z-index of 2 thus we are giving background a z-index of 3 so that buttons can overlay it*/
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* this is to increase the z-index of button so that when we add the name and position in middle with zindex 5 these buttons should not fade out */
+.slides-navigation {
+	z-index: 6
+}
+
+.slides-navigation .prev,  /*These 1 and 2 line means we are accessing from class slides-navigation and further their next and prev prop and the code inside the braces will be applied for both next and prev*/
+.slides-navigation .next {
+	width: 47px;
+	height: 47px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+/*These codes in which we separately access next and prev fromslides-navigation will be applied toboth separately */
+/* here we added 'a' before .prev and .nextbecoz without these the icons were touching the edges of the screen implying the above written code was overriding the below code thus in order to get rid of it we added the 'a' tag i.e. the 'anchor' tag*/
+.slides-navigation a.prev{
+	left: 20px; /*20 pixels from left*/
+	background-image: url(../img/icons/back.png); /* Here as currently we are in CSS file so in order to access the icon images first we have to got back to the root i.e. 'Personal Portfolio' and then we will go to 'img' and then access the icon images thus in url the '../' implies 'going one folder back' and then when we reach personal portfolio we will then acces the icons.*/
+}
+
+.slides-navigation a.next{
+	right: 20px;
+	background-image: url(../img/icons/next.png);
+}
+
+/* '.' means class*/
+.titleMessage {
+	position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -125px;
+}
+
+.titleMessage .heading p {
+	color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 100;
+    letter-spacing: 7px;
+}
+
+/* size of NAME on homepae as the name can be reached in our HTML file by first accessing class titleMessage then class heading and then class main*/
+.titleMessage .heading .main{
+	font-size: 50px
+}
+
+/*Size of Position tag on hoepage*/
+.titleMessage .heading .sub{
+	font-size: 23px
+}
+
+.section {
+	padding: 100px 0; /*Padding like this means giving 100px to TOP & BOTTOM and 0 to LEFT & RIGHT*/
+	/*The other way of padding could be
+	padding: 100px/*(top) 0/*(right) 100px/*(bottom) 0/*(left);*/
+
+}
+
+/*From here we'll style ou about page*/
+
+.aboutImage {
+	max-width: 100%;
+}
+
+/*From here we will style our technical skillls section*/
+
+.skillsSection,
+.contactSection {
+	background-color: #e74c3c;
+	color: #fff;
+}
+
+.skill {
+	text-align: center
+	margin-left: 10px;
+}
+
+.chart {
+	position: relative;
+    width: 152px;
+    height: 152px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*This is for al the piecharts*/
+.chart canvas{
+	position: absolute; /* absolute means setting it near its closest parent which have their position set just like while giving constraints in iOS we attach one component to another component whose layout has been decided priorly*/
+    left: 0;
+    top: 0;
+}
+
+/*To style the percentage shown inside the pie chart*/
+.chart .percent{
+	color: #000;
+    line-height: 152px;
+    display: inline-block;
+    font-size: 35px;
+}
+
+/*To add a percent sign after writing the percentage*/
+.chart .percent:after {
+	content: '%';
+}
+
+/*From here we will style our STATS section*/
+.squareItem {
+	margin-top: 30px;
+	position:relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after{
+	content: '';
+	position: absolute;
+	top: 0px; /*Do not forget toput ';' the project will run but the specific property will not run and you will not be able to find the error*/
+	width: 30%;
+	border-bottom: 2px solid #444;
+}
+
+.squareInnerContainer:before {
+	right: 0px;
+}
+
+.squareInnerContainer:after {
+	left: 0px;
+}
+
+.squareContent h2{
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #e74c3c
+}
+
+.squareContent h3{
+	font-size: 13px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.squareIcon {
+	position: absolute;
+    left: 50%;
+    top: -40px;
+    width: 40%;
+    height: 60px;
+    font-size: 55px;
+    margin-left: -20%;
+    color: #444;
+}
+
+
+/*From here we will style our Contacts section*/
+
+.subHeading {
+	margin-top: -40px;
+}
+
+.contactButton {
+	color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+
+/*.contactButton:hover {
+	text-decoration: none;
+	color: #e74c3c;
+	background-color: #fff;
+}*/
+
+.circleItem {
+	margin-top: 30px;
+	position:relative;
+}
+
+.circleInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #e74c3c;
+    
+}
+
+.circleInnerContainer:before,
+.circleInnerContainer:after{
+	content: '';
+	position: absolute;
+	top: 0px; /*Do not forget toput ';' the project will run but the specific property will not run and you will not be able to find the error*/
+	width: 30%;
+	border-bottom: 2px solid #e74c3c;
+}
+
+.circleInnerContainer:before {
+	right: 0px;
+}
+
+.circleInnerContainer:after {
+	left: 0px;
+}
+
+.circleItem {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	position:relative;
+}
+
+.circleContent h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #e74c3c
+}
+
+
+.circleIcon {
+	position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-bottom: 30px;
+    width: 40%;
+    height: 60px;
+    font-size: 55px;
+    margin-left: -7%;
+    color: #fff;
+}
+
+
+
+/*From here we will style our PORTFOLIO section*/
+
+
+.filter a{
+	color: #bdc3c7;
+	border: 1px solid #bdc3c7;
+	padding: 10px 18px;
+	display: block;
+}
+
+.filter li{
+	display: inline-block;
+	padding: 5px;
+}
+
+.filter .current {
+	background-color: #e74c3c;
+	border-color: #e74c3c;
+	color: #fff;
+}
+
+.filter {
+	text-align: center;
+	width: 100%;
+}
+
+.section .heading {
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+.items li {
+	display: inline-block;
+	padding; 5px;
+}
+
+.itemsContainer {
+
+	width: 100%;
+
+	/*padding: 5px 5px 5px 5px;*/
+}
+
+.items li img {
+	width: 100%;
+	-webkit-transition: all 0.2s linear, 1s; /*for chrome*/
+	-moz-transition: all 0.2s linear, 1s;	/*for mozilla*/
+	-o-transition: all 0.2s linear, 1s;  /*for opera*/
+	-ms-transition: all 0.2s linear, 1s;  /*for microsoft*/
+	-transition: all 0.2s linear, 1s;  /*for all others*/
+}
+
+.items .item {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	padding: 10px 0 35px 10px;
+}
+
+.items .icons {
+	position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align: center;
+    z-index: 3;
+}
+
+
+.items .icons i {
+	color: #fff;
+    font-size: 20px;
+    margin-top: 9px;
+}
+
+.items a {
+	width: 40px;
+    height: 40px;
+    background-color: #e74c3c;
+    position: relative;
+    display: inline-block;
+
+    -webkit-transition: all 0.2s linear, 0.2s; /*for chrome*/
+	-moz-transition: all 0.2s linear, 0.2s;	/*for mozilla*/
+	-o-transition: all 0.2s linear, 0.2s;  /*for opera*/
+	-ms-transition: all 0.2s linear, 0.2s;  /*for microsoft*/
+	-transition: all 0.2s linear, 0.2s;  /*for all others*/
+}
+
+.items .imageOverlay {
+	width: 100%;
+	height: 90%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0;
+
+	-webkit-transition: all 0.2s linear, 1s; /*for chrome*/
+	-moz-transition: all 0.2s linear, 1s;	/*for mozilla*/
+	-o-transition: all 0.2s linear, 1s;  /*for opera*/
+	-ms-transition: all 0.2s linear, 1s;  /*for microsoft*/
+	-transition: all 0.2s linear, 1s;  /*for all others*/
+
+
+
+}
+
+
+.items .item:hover .imageOverlay {
+	opacity: 1;
+	padding: 10px 0 35px 10px;
+}
+
+.items .openButton {
+	float: left;
+	left: -200px;
+}
+
+
+.items .projectLink {
+	float: right;
+	right: -200px;
+}
+
+.items .item:hover .openButton {
+	left: 0px;
+}
+
+.items .item:hover .projectLink {
+	right: 0px;
+}
+
+
+.items .item:hover img{
+	-webkit-transform: scale(1.05, 1.05); /*for chrome*/
+	-moz-transform: scale(1.05, 1.05);	/*for mozilla*/
+	-o-transform: scale(1.05, 1.05);  /*for opera*/
+	-ms-transform: scale(1.05, 1.05);  /*for microsoft*/
+	-transform: scale(1.05, 1.05);  /*for all others*/
+
+}
+
+.items {
+	padding:0;
+}
+
+/*From here we did our copyright section*/
+
+.copyrightSection {
+	background-color: #000;
+	color: #fff;
+	padding-bottom: 30px 5px;
+}
+
+.copyrightSection p {
+	margin: 0;
+}
+
+
+/*From here we did our NAVIGATION BAR section*/
+
+#navigation {
+	background-color: #e74c3c;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li{
+	padding: 0 10px;
+}
+
+#navigation li a {
+	color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+	color: #fff;
+}
+
+
+.navbar-toggler-icon{
+	background: url(../img/icons/menu.png);
+	background-size: 100%;
+}
+
+
+.fixedNav #navigation {
+	position: fixed;
+	top: 0;
+}
+
+
+/*Working on our loader*/
+.loader {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+.loader .inner {
+	width: 100%;
+	height: 100%;
+	background: url(../img/loader.gif) center center no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

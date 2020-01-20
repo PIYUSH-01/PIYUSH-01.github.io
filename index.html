@@ -1,0 +1,674 @@
+<!-- the only difference between the .js and min.js files is that the min.js files are minified -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfoliio</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- here we added the css file using "link" tag we extracted from the SUPERSLIDES repository for the sliding effect on the homepage -->
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <!-- Adding owl.carousel.css file for the carousel effect in our technical skills section. -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <!--In the 2 lines 7 and 8 we have basically added bootstrap to our code AND THE JAVASCRIPT PART OF THE BOOTSTRAP FILE IS ADDED IN THE BODY TOAVOID DELAY AS I HAVE MENTIONED IN THE COMMENT BELOW-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Adding font-awesome css file for the STATS section of our project -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Adding fancybox css file for the portfolio section  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <!-- Adding our css file for the project that is 'style.css' -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- We have added jquery here and the thing to note is except adding jquery every other JAVASCRIPT file will be added in the body section because sometimes those files can take much time to load and that can lead to a lag if added in the head section-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- Starting working on the OPENING LOADER -->
+<div class="loader">
+
+	<div class="inner"></div>
+
+</div>
+
+
+
+
+
+
+<!-- Starting working on our SLIDES page from here COLLAPSED EXPAND -->
+<div id="slides">
+		<!-- This overlay class is to dimthe background a bit in order to make white components more visible & now we'll design it in our css file. -->
+	  <div class="overlay"></div>
+
+	  <div class="slides-container">
+	    <img src="img/slide1.jpg" alt="">
+	    <img src="img/slide2.jpg" alt="">
+	    <img src="img/slide3.jpg" alt="">
+	  </div>
+
+
+	  <div class="titleMessage">
+	  	<div class="heading">
+	  		<p class="main">PIYUSH KHURANA</p>
+	  		<p class="sub typed"></p>
+	  	</div>
+	  </div>
+
+
+	  <!-- The below code is used for adding button on the right and left of the home page for changing the pictures. -->
+	  <nav class="slides-navigation">
+	    <a href="#" class="next"></a>
+	    <a href="#" class="prev"></a>
+	  </nav>
+
+</div>
+
+
+<!-- Starting working on our NAVIGATION BAR from here COLLAPSED EXPAND -->
+<nav id= "navigation" class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" href="#">Piyush Khurana</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#stats">Statistics</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#portfolio">Statistics</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+   
+
+
+<!-- Starting working on our ABOUT page from here COLLAPSED EXPAND -->
+<div id="about" class="section">
+
+		<div class="container"> 
+		<!-- Container class is also of bootstrap and is beinf used for image styling in the about section. -->
+			<div class="row">
+
+				<div class="col-md-5">
+					<!-- col-md-5 is a styling type of bootstrap -->
+					<img class="aboutImage" src="img/piyush.jpg">
+				</div>
+
+				<div class="col-md-7">
+					<h4>My name is Piyush Khurana</h4>
+					<p>Hi! I'm Piyush Khurana from Delhi, India. I am a mobile application developer(iOS) and have some experience in developing voice apps for both Alexa and Google Assisstant. I am currently pursuing Bachelor of Technology in Computer Science from Guru Gobind Singh Indraprastha University(7.9 GPA).</p>
+					<p>I'm quite experienced in various programming laguages like Swift, C, C++, HTML/CSS and also have knowledge of Javascipt & PHP.</p>
+				</div>
+
+			</div>
+
+		</div>
+
+</div>
+
+
+<!-- Starting working on our TECHNICAL SKILLS section from here COLLAPSED EXPAND -->
+<div id="skills" class="skillsSection section">
+
+		<div class="container"> 
+		<!-- Container class is also of bootstrap and is beinf used for image styling in the about section. -->
+			<div class="row">
+
+				<div class="col-md-12 text-center">
+					<!-- This section is having 2 classes of bootstrap 1.col-md-12 2. text-center -->
+					<h2>TECHNICAL SKILLS</h2>
+					<p>Representation of my proficiency in each skill</p>
+				</div>
+
+				<div class="owl-carousel owl-theme">
+					
+					<!-- SWIFT -->
+					<div class="skill">
+						<span class="chart" data-percent="85">
+							<span class="percent">85</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>Swift</h4>
+						<p>Used in most of my iOS projects</p>
+					</div>
+
+					<!-- C -->
+					<div class="skill">
+						<span class="chart" data-percent="80">
+							<span class="percent">80</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>C Language</h4>
+						<p>I used it in my college to clear my basics</p>
+					</div>
+
+					<!-- C++ -->
+					<div class="skill">
+						<span class="chart" data-percent="85">
+							<span class="percent">85</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>C++</h4>
+						<p>I mostly use it to solve Data Structures and Algorithms</p>
+					</div>
+
+					<!-- HTML/CSS -->
+					<div class="skill">
+						<span class="chart" data-percent="70">
+							<span class="percent">70</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>HTML/CSS</h4>
+						<p>I use them for Web development</p>
+					</div>
+
+					<!-- JAVASCRIPT -->
+					<div class="skill">
+						<span class="chart" data-percent="60">
+							<span class="percent">60</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>Javascript</h4>
+						<p>I mostly use it for VUI development or Web development</p>
+					</div>
+
+					<!-- PHP -->
+					<div class="skill">
+						<span class="chart" data-percent="40">
+							<span class="percent">40</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>PHP</h4>
+						<p>I know the basics of it</p>
+					</div>
+
+					<!-- VOICEFLOW -->
+					<div class="skill">
+						<span class="chart" data-percent="80">
+							<span class="percent">80</span>
+							<canvas height="152" width="152"></canvas>
+						</span>
+						<h4>Voiceflow</h4>
+						<p>I use it to develop apps for Amazon Alexa & Google Assistant</p>
+					</div>
+
+				</div>
+				
+				
+			</div>
+
+		</div>
+
+</div>
+
+
+<!-- Starting working on our STATS section from here COLLAPSED EXPAND -->
+<div id="stats" class="statsSection section">
+
+		<div class="container"> 
+		<!-- Container class is also of bootstrap and is beinf used for image styling in the about section. -->
+			<div class="row">
+
+				<!-- NO. OF iOS PROJECTS -->
+				<div class="col-md-3 col-sm-6">
+					<!-- col-md-3 is grid class of BOOTSTRAP and col-sm-6 is also similar type of class but of smaller size which will come into action while using a mobile or say a smaller device. -->
+
+					<div class="squareItem">
+
+						<div class="squareInnerContainer">
+							
+							<div class="squareIcon">
+								<i class="fa fa-mobile"></i>
+							</div>
+
+		                    <div class="squareContent">
+		                    	<h2 class="counter">15</h2>
+		                    	<h3>iOS Development Projects</h3>
+		                    </div>
+
+						</div>
+						
+					</div>
+
+
+				</div>
+
+
+				<!-- NO. OF SELF PROJECTS -->
+				<div class="col-md-3 col-sm-6">
+					<!-- col-md-3 is grid class of BOOTSTRAP and col-sm-6 is also similar type of class but of smaller size which will come into action while using a mobile or say a smaller device. -->
+
+					<div class="squareItem">
+
+						<div class="squareInnerContainer">
+							
+							<div class="squareIcon">
+								<i class="fa fa-laptop"></i>
+							</div>
+
+		                    <div class="squareContent">
+		                    	<h2 class="counter">6</h2>
+		                    	<h3>VUI Development Projects</h3>
+		                    </div>
+
+						</div>
+						
+					</div>
+
+
+				</div>
+
+
+
+				<!-- Years of experience -->
+				<div class="col-md-3 col-sm-6">
+					<!-- col-md-3 is grid class of BOOTSTRAP and col-sm-6 is also similar type of class but of smaller size which will come into action while using a mobile or say a smaller device. -->
+
+					<div class="squareItem">
+
+						<div class="squareInnerContainer">
+							
+							<div class="squareIcon">
+								<i class="fa fa-clock-o"></i>
+							</div>
+
+		                    <div class="squareContent">
+		                    	<h2 class="counter">1+</h2>
+		                    	<h3>Years Of Experience</h3>
+		                    </div>
+
+						</div>
+						
+					</div>
+
+
+				</div>
+
+
+
+
+				<div class="col-md-3 col-sm-6">
+					<!-- col-md-3 is grid class of BOOTSTRAP and col-sm-6 is also similar type of class but of smaller size which will come into action while using a mobile or say a smaller device. -->
+
+					<div class="squareItem">
+
+						<div class="squareInnerContainer">
+							
+							<div class="squareIcon">
+								<i class="fa fa-briefcase"></i>
+							</div>
+
+		                    <div class="squareContent">
+		                    	<h2 class="counter">1</h2>
+		                    	<h3>Interships Completed</h3>
+		                    </div>
+
+						</div>
+						
+					</div>
+
+
+				</div>
+				
+				
+			</div>
+
+		</div>
+
+</div>
+
+
+<!-- Starting working on our CONTACT section from here COLLAPSED EXPAND-->
+
+<div id="contact" class="contactSection section">
+		<div class="container"> 
+			<div class="row">
+				
+
+				<div class="col-md-12 text-center">
+			
+					<p class="subHeading">Like what you see?</p>
+					<h2>I'd love to hear from you</h2>
+					<h4>Get in touch</h3>
+
+				</div>
+
+
+				<div class="col-md-4 col-sm-6">
+
+					<div class="circleItem">
+
+						<div class="circleInnerContainer">
+							<div class="circleIcon">
+							
+								<a href="https://www.linkedin.com/in/piyush-khurana-80292115a" title="LinkedIn"><i style="margin-right: 0.5em; color: #EEEEEE;" class="fa fa-linkedin"></i></a>
+							
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+
+
+				<div class="col-md-4 col-sm-6">
+
+					<div class="circleItem">
+
+						<div class="circleInnerContainer">
+							<div class="circleIcon">
+							
+								<a href="mailTo:piyushkhurana165@gmail.com" title="Gmail"><i style="margin-right: 0.5em; color: #EEEEEE;" class="fa fa-at"></i></a>
+							
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+
+
+
+				<div class="col-md-4 col-sm-6">
+
+					<div class="circleItem">
+
+						<div class="circleInnerContainer">
+							
+							<div class="circleIcon">
+							
+								<a href="https://github.com/PIYUSH-01" title="GitHub" ><i style="margin-right: 0.5em; color: #EEEEEE;" class="fa fa-github"></i></a>
+							
+							</div>
+
+						</div>
+						
+					</div>
+
+				</div>
+				
+			</div>
+
+		</div>
+
+</div>
+	
+
+<!-- Starting working on our PORTFOLIO section from here COLLAPSED EXPAND-->
+<div id="portfolio" class="section">
+
+	<div class="container"> 
+	<!-- Container class is also of bootstrap and is beinf used for image styling in the about section. -->
+		<div class="row">
+
+				<div class="heading">
+					<h2>PORTFOLIO</h2>
+				</div>
+
+ 				<div class="filter">
+						
+ 					<ul id="filters">
+							
+						<li><a href="#" data-filter="*" class="current">ALL</a></li>
+						<li><a href="#" data-filter=".apps">Apps</a></li>
+						<li><a href="#" data-filter=".me">Me</a></li>
+						<li><a href="#" data-filter=".websites">Websites</a></li>
+
+					</ul>
+
+				</div>
+
+
+
+			<div class="itemsContainer">
+					
+				<ul class="items">
+						
+					<li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+					<li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
+						
+						<!-- This is the image that will appear on the portfolio sections. -->
+						<div class="item">
+								
+							<img src="img/portfolio/thumbnails/initial.jpg">
+
+							<div class="icons">
+						 	<!-- Theis the the button which wil view the image when clicked on the same page -->
+							<a href="img/portfolio/final.jpg" title="View Image" class="openButton" data-fancybox data-caption="Projects coming soon :)">
+								<i class="fa fa-search"></i>
+							</a>
+
+							<!-- this is the button which will open the link of the image on a new page when clicked -->
+							<a href="https://github.com/PIYUSH-01" target="_blank" class="projectLink"> <!--By ' target="_blank" the link of the image will open in anew tab. ' -->
+								<i class="fa fa-chain"></i>
+							</a>
+						</div>	
+
+							<div class="imageOverlay"></div>
+						</div>
+
+					</li>
+
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<!-- Starting working on the COPYRIGHT section fromhere COLLAPSED EXPAND -->
+<div class="copyrightSection">
+
+	<div class="col-md-12 text-center">
+			<!-- '&copy;' produces the copyright symbol in HTML -->
+		<p>&copy; Copyright Piyush Khurana 2020</p>
+		
+	</div>
+	
+</div>
+
+
+
+
+
+    
+    <!-- here we added the javascript file for sliding effect in the homepage using "script" tag to add the js file we extracted from the SUPERSLIDES github page-->
+    <script src="js/jquery.superslides.min.js"></script>
+
+    <!-- here we are adding countUp.js and countUp-jquery.js file to create a ounting no.s effect in our STATS section -->
+    <script src="js/countUp-jquery.js"></script>
+    <script src="js/countUp.js"></script>
+    
+
+    <!-- here we are adding easypiechart js file to create piecharts in ourtechnicl skills section -->
+    <script src="js/jquery.easypiechart.min.js"></script>
+
+    <!-- adding owl.carousel.min.js file to create the carousel effect for our various technical skills -->       
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- adding typed.js fileto create that typing animation of texton our homepage -->
+    <script src="js/typed.min.js"></script>
+    <!--Popper.js file required to add bootstrap is added below and it has to be added before bootstrap.min.js-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!--JAVASCRIPT file of bootstrap-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+	<!-- Here we added theisotopejs file for the filtering effect in our portfolio section -->
+	<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+	
+	<!-- Here we added fancybox file for the portfolio section in our project -->
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <!-- Here we added the reference to our main js fie for the project that is script.js -->
+	<script src="js/script.js"></script>
+
+
+</body>
+</html>
