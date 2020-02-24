@@ -1,2 +1,2 @@
 # PIYUSH-01.github.io
-this is my ebsite
+this is my website
