@@ -1,6 +1,22 @@
 //Wherever we use '$' it means either we are creating a jquery object or weare using a jquery file 
 // In the below code snippet we are saying "This code will run when the document or say page is ready(page is same asthe document)"
 
+//From here we are working on our loader.
+
+const loaderWrapper = document.querySelector('.loader-wrapper');
+const loader = document.querySelector('.loader');
+
+const loadingTime = 1500;
+
+setTimeout(() => {
+	loader.style.transform = 'scale(100)';
+}, loadingTime);
+
+setTimeout(() => {
+	loaderWrapper.style.display = 'none';
+}, loadingTime + 150);
+
+
 //While using countUp.js always remember to remove the last line 'export( countUP )' otherwise the code will not work and will give different types of erros.
 
 $(window).on("load", function(){
