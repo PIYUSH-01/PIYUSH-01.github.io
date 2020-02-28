@@ -85,7 +85,8 @@ body {
 /*From here we will style our technical skillls section*/
 
 .skillsSection,
-.contactSection {
+.contactSection,
+.social-menu {
 	background-color: #e74c3c;
 	color: #fff;
 }
@@ -186,7 +187,7 @@ body {
 }
 
 .contactButton {
-	color: #fff;
+	color: #000;
     padding: 15px 20px;
     display: inline-block;
     margin-top: 20px;
@@ -199,12 +200,8 @@ body {
 	text-decoration: none;
 	color: #e74c3c;
 	background-color: #fff;
-}*/
-
-.circleItem {
-	margin-top: 30px;
-	position:relative;
 }
+*/
 
 .circleInnerContainer {
     position: relative;
@@ -256,7 +253,6 @@ body {
     margin-left: -7%;
     color: #fff;
 }
-
 
 
 /*From here we will style our PORTFOLIO section*/
