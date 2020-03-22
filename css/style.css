@@ -80,6 +80,11 @@ body {
 
 .aboutImage {
 	max-width: 100%;
+	transition: transform 1s ease;
+}
+
+.aboutImage:hover {
+	transform: scale(1.4) rotate(10deg);
 }
 
 /*From here we will style our technical skillls section*/
