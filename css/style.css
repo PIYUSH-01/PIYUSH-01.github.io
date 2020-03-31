@@ -2,10 +2,22 @@
 body {
 	font-size: 14px;
     color: #333;
+	/*background: url(../img/about_section/piyush.jpg);*/
+
     background-color: #fff;
     letter-spacing: 1px;
 }
 
+#particles-js{
+    height: 100%;
+}
+
+/*#particles canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}*/
 
 .overlay {
 	width: 100%;
@@ -13,6 +25,14 @@ body {
 	position: absolute;
 	z-index: 3; /*Z index implies the overlay of one thing over the other, the component having highes z index will appear above the component of lower z-index, and in our project our buttons have a z-index of 2 thus we are giving background a z-index of 3 so that buttons can overlay it*/
 	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+#particle-js{
+	height: 100%
+	background-color: #fff;
+	background-size: cover;
+	height: 680px;
 }
 
 /* this is to increase the z-index of button so that when we add the name and position in middle with zindex 5 these buttons should not fade out */
@@ -300,7 +320,7 @@ body {
 .itemsContainer {
 
 	width: 100%;
-
+	/*background: url(../img/about_section/piyush.jpg);*/
 	/*padding: 5px 5px 5px 5px;*/
 }
 
