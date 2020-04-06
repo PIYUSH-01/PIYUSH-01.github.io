@@ -552,6 +552,7 @@ button: after{
 }
 
 button:hover {
+	box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 	background: #e74c3c;
 	color: #fff;
 	cursor: pointer;
