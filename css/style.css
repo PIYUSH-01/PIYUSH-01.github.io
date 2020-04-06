@@ -498,7 +498,113 @@ body {
 }
 
 
-/*Working on our parallax effect*/
+/*Working o our RESUME*/
+
+
+
+
+button {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: none;
+	color: #e74c3c;
+	width: 240px;
+	height: 80px;
+	border: 1px solid #e74c3c;
+	font-size: 18px;
+	border-radius: 4px;
+	transition: .6s;
+	overflow: hidden;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:before {
+	content: '';
+	display: block;
+	position: absolute;
+	background: rgba(255, 255, 255, .5);
+	width: 60px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: .5s;
+	filter: blur(30px);
+	transform: translateX(-130px) skewX(-15deg);
+}
+
+button: after{
+	content: '';
+	display: block;
+	position: absolute;
+	background: rgba(255, 255, 255, .2);
+	width: 30px;
+	height: 100%;
+	left: 30px;
+	top: 0;
+	opacity: 0;
+	filter: blur(30px);
+	transform: translate(-100px) scaleX(-15deg);
+}
+
+button:hover {
+	background: #e74c3c;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover:before {
+	transform: translateX(300px) skewX(-15deg);
+	opacity: .6;
+	transition: .7s;
+}
+
+button:hover:after {
+	transform: translateX(300px) skewX(-15deg);
+	opacity: 1;
+	transition: .7s;	
+}
+
+/*.resume-button {
+	color: #fff;
+	-webkit-box-flex: 1;
+	position: relative;
+	padding: 30px;
+	border: 2px solid #881238;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: .35s;
+	transition: .35s;
+}
+
+.resume-button:hover:after {
+	left: -10%;
+	width: 120%;
+}
+
+.resume-button:after {
+	position: absolute;
+	-webkit-transition: .35s;
+	transition: .35s;
+	content: '';
+	width: 0;
+	top: 0;
+	height: 100%;
+	left: -10%;
+	-webkit-transform: skewX(15deg);
+	transform: skewX(15deg);
+	z-index: -1;
+	background: #881238
+}*/
+
+
 
 
 
