@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 	// To add typing effect using typed.js 
 	var typed = new Typed(".typed", {
-		strings: ["iOS Developer.", "VUI Developer.", "Student."],
+		strings: ["Budding Software Developer.", "iOS Development.", "Web Enthusiast." ,"Student."],
 		typeSpeed: 70,
 		loop: true, //This line will make sure when all the three strings are typed this process will start again fromthe first string
 		startDelay: 1000, //Wait 1000 mili seconds before starting typing effect
