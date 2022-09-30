@@ -1,6 +1,6 @@
 # PIYUSH-01.github.io
 
-- This ismy Personal Portfolio Website that I have designed using HTML/CSS and some Javascript too.
+- This is my Personal Portfolio Website that I have designed using HTML/CSS and some Javascript too.
 - Other than that I've tried to grab and add some beautiful animations to some buttons and images that comes into action when you hover over them.
 - I have used various other libraries like Bootstrap etc.
 
