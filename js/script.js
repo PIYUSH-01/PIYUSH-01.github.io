@@ -48,7 +48,7 @@ $(document).ready(function() {
 	$('.owl-carousel').owlCarousel({
 	    loop:true,
 	    items: 4,
-	    //In responsive we are basically deciding how many pie charts must be shownbased on the screen size the site is being used on like if the size is between 0 to 480  then just show 1 at a time and if the size is between 480 to 768 then show 2 items and further.
+	    //In responsive we are basically deciding how many charts must be shownbased on the screen size the site is being used on like if the size is between 0 to 480  then just show 1 at a time and if the size is between 480 to 768 then show 2 items and further.
 	    responsive:{
 	        0:{
 	            items:1
